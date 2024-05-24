@@ -1,5 +1,9 @@
 from langchain.prompts import PromptTemplate
 
+'''
+The variable inside {} will be replaced by the values of
+the input variables passed while calling the prompt.
+'''
 def get_prompt(question_details, student_response):
     '''
     question_details is one row of question_data
@@ -19,6 +23,7 @@ def get_prompt(question_details, student_response):
     
     if question_details['QuestionType'].values[0] == 'MCQ':
         prompt = mcq_prompt.format(correct_answer = question_details['CorrectAnswer'].values[0], student_answer = student_response['Student_Response'], marks = question_details['Marks'].values[0])
+        
     elif question_details['QuestionType'].values[0] == 'Subjective':
         prompt = subjective_prompt.format(correct_answer = question_details['CorrectAnswer'].values[0], student_answer = student_response['Student_Response'], marks = question_details['Marks'].values[0], criterion = question_details['MarkingCriterion'].values[0])
 

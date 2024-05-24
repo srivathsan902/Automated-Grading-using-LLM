@@ -5,6 +5,9 @@ import os
 title = 'Performance Report'
 class PDF(FPDF):
     def header(self):
+        '''
+        Modify the logo if needed
+        '''
         self.image('assets/logo.jpg', 10, 8, 25)
         image_w = 25
         self.set_font('helvetica', 'B', 20)
@@ -24,6 +27,9 @@ class PDF(FPDF):
         self.ln(20)
 
     def footer(self):
+        '''
+        For page numbers
+        '''
         self.set_y(-15)
         self.set_font('helvetica', 'I', 8)
         self.set_text_color(169, 169, 169)

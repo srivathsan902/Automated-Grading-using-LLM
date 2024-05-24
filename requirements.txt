@@ -6,3 +6,5 @@ langchain
 groq
 requests
 python-dotenv
+matplotlib
+tqdm
