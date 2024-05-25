@@ -1,5 +1,5 @@
-from generate_prompt import get_prompt
-from get_grade import get_grade
+from generate_prompt import get_prompt, get_feedback_prompt
+from get_grade import get_grade, call_feedback_llama
 from generate_report import create_pdf
 import matplotlib.pyplot as plt
 

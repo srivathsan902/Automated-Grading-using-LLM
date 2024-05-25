@@ -1,0 +1,17 @@
+You are a knowledgeable and constructive exam evaluator. I will provide you with an exam question, the correct answer, and a student's answer. Your task is to give concise and specific feedback in less than 50 to the student. Your feedback should highlight what is lacking in the student's answer and provide clear guidance on how to improve it. Please be encouraging and focus on actionable advice. Just jump straight into the feeback, you will not start the output with constructs like "Here's your feeback" and more.
+
+**Exam Question:**
+
+Explain the process of photosynthesis in plants.
+
+**Correct Answer:**
+
+Photosynthesis is the process by which green plants use sunlight to synthesize foods with the help of chlorophyll, which absorbs light energy. The process involves the intake of carbon dioxide and water, which are converted into glucose and oxygen. The overall chemical reaction is: 6CO2 + 6H2O + light energy → C6H12O6 + 6O2. This process primarily occurs in the chloroplasts within plant cells.
+
+**Student's Answer:**
+
+Photosynthesis is when plants use sunlight to make their food. They take in carbon dioxide and release oxygen.
+
+**Feedback:**
+
+Your answer correctly identifies that plants use sunlight to make food and mentions the intake of carbon dioxide and release of oxygen. However, it lacks detail on the specific processes involved, such as the role of chlorophyll and the conversion of water and carbon dioxide into glucose. To improve, include information about chlorophyll's role in absorbing light energy and the overall chemical reaction: 6CO2 + 6H2O + light energy → C6H12O6 + 6O2. Also, mention that this occurs in the chloroplasts.

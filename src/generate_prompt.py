@@ -28,3 +28,20 @@ def get_prompt(question_details, student_response):
         prompt = subjective_prompt.format(correct_answer = question_details['CorrectAnswer'].values[0], student_answer = student_response['Student_Response'], marks = question_details['Marks'].values[0], criterion = question_details['MarkingCriterion'].values[0])
 
     return prompt
+
+def get_feedback_prompt(question_details, student_response):
+
+    subjective_prompt = f"""
+        **Exam Question:**
+        {question_details['Question'].values[0]}
+
+        **Correct Answer:**
+        {question_details['CorrectAnswer'].values[0]}
+
+        **Student's Answer:**
+        {student_response['Student_Response']}
+
+        **Feedback:**
+    """
+
+    return subjective_prompt

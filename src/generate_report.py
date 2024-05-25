@@ -54,8 +54,10 @@ def create_pdf(student_data, questions_data):
 
         if response.empty:
             response = 'Unattempted'
+            feedback = str(" ")
         else:
             response = response.values[0]
+            feedback = str(student_data[student_data['QuestionID'] == question_id]['Feedback'].values[0])
 
         awarded_marks = student_data[student_data['QuestionID'] == question_id]['MarksAwarded']
         if awarded_marks.empty:
@@ -98,6 +100,7 @@ def create_pdf(student_data, questions_data):
         content += f'Student Response: {response}\n'
         content += f'Correct Answer: {correct_answer}\n'
         content += f'Explanation: {explanation}\n'
+        content += f'Feedback: {feedback}\n' 
         content += f'Marks Awarded: {awarded_marks}\n'
 
         pdf.multi_cell(0, 10, content, border=1, ln=1, align='L', fill=True)

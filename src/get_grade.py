@@ -11,7 +11,7 @@ Create a groq api key and put it in .env file
 '''
 load_dotenv()
 
-groq_api_key = os.getenv("GROQ_API_TOKEN")
+groq_api_key = os.getenv("GROQ_API_KEY")
 
 '''
 Add new models here
@@ -100,8 +100,15 @@ def call_mixtral(prompt):
     grade = chat_completion.choices[0].message.content
     return grade
 
-
-
+def call_feedback_llama(messages):
+    client = Groq(api_key=groq_api_key)
+    chat_completion = client.chat.completions.create(
+        messages=messages,
+        model="llama3-8b-8192",
+        temperature=0.0
+    )
+    feedback = chat_completion.choices[0].message.content
+    return feedback
 
 if __name__ == "__main__":
 
